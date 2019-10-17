@@ -1,0 +1,156 @@
+/* TABLE ADMINS */
+
+insert into LATABLEQUICONTIENTLESADMINISTRATEURSCOOLS(LTQCLAC_login, LTQCLAC_mot_de_passe, LTQCLAC_source) values ("Responsable", "resp19*DOOG", true);
+
+
+/* TABLE GOODIE_TYPE */
+
+insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("Mug"); 
+insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("T-shirt"); 
+insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("Poster"); 
+insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("Casquettes"); 
+insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("Peluche");
+insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("Figurine");
+insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("Cartables");
+insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("Brosse à dent");
+insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("Jeu de cartes");
+insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("Porte-clé");
+insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("Trousse");
+insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("Pyjama");
+insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("Coque de téléphone");
+insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("Parure de lit");
+
+
+/* TABLE POINT_RETRAIT */
+
+insert into POINT_RETRAIT(POINTRETRAIT_nom, POINTRETRAIT_adresse) values("Kergoat", "8 rue du Duc des Myosotis");
+insert into POINT_RETRAIT(POINTRETRAIT_nom, POINTRETRAIT_adresse) values("Guipavas", "85 avenue des lilas");
+insert into POINT_RETRAIT(POINTRETRAIT_nom, POINTRETRAIT_adresse) values("Saint-Malo", "13 boulevard du couscous");
+insert into POINT_RETRAIT(POINTRETRAIT_nom, POINTRETRAIT_adresse) values("Plouarzel", "2 rue de l'Église");
+
+
+/* TABLE VENDEUR */
+
+insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINTRETRAIT_id) values("vendeur1", "Guillarmou", "Rémi", "password", 1);
+insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINTRETRAIT_id) values("vendeur2", "Pilven", "Mathis", "password", 3);
+insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINTRETRAIT_id) values("vendeur3", "Liscornet", "Maëla", "password", 2);
+insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINTRETRAIT_id) values("vendeur4", "Ragot", "Matthieu", "password", 4);
+insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINTRETRAIT_id) values("vendeur5", "Pilin", "Pierre", "password", 1);
+
+/* TABLE CLIENT */
+
+insert into CLIENT(CLIENT_code, CLIENT_nom, CLIENT_prenom) values("PvYrxUpPmMnBSNyJBthaUqWmDSERZJWtmmbYzbKzzrDtt", "Quéant", "Quentin");
+insert into CLIENT(CLIENT_code, CLIENT_nom, CLIENT_prenom) values("KHGgZYrFewGxccYnUmrgmHyRzFZFvcgWBXFYpQxiwyrHS", "Richard", "Kaivin");
+insert into CLIENT(CLIENT_code, CLIENT_nom, CLIENT_prenom, CLIENT_mail) values("bgHybWiJDxqdqtXWGYmaswRcZyJCQZhLQLkFBMyvKkVxr", "Fauvel", "Bleuenn", "bleuenn.fauvel@gmail.com");
+insert into CLIENT(CLIENT_code, CLIENT_nom, CLIENT_prenom) values("TqkSpzzYGuQqkFggpgLTMXaqfnYvvBUZGDyNatXiVDpWA", "Houssaye", "Hugo");
+
+
+/*  États commande
+*   préparé : p
+*   expédié : x
+*   disponible : d
+*   retiré : r
+*   expiré : e
+*   annulé : a
+*/
+/* TABLE COMMANDE */
+
+insert into COMMANDE(COMMANDE_code, COMMANDE_etat, COMMANDE_date, POINT_RETRAIT_id, CLIENT_id) values ("YucaXnRRGvdqYzbBnUmdsnsEAThXNBvvZqddLBTYhBcSTiJqWixwGVZJYvqD", "p", "2019-09-20", 1, 3);
+insert into COMMANDE(COMMANDE_code, COMMANDE_etat, COMMANDE_date, COMMANDE_date_retrait, POINT_RETRAIT_id, CLIENT_id) values ("ZrDzdBMNpCBTXPCkyKHDrksHnYfBrbAjvsinpqUukTCYhTYuPeKnGvEkSRmb", "r", "2019-08-22", "2019-08-27", 3, 2);
+insert into COMMANDE(COMMANDE_code, COMMANDE_etat, COMMANDE_date, POINT_RETRAIT_id, CLIENT_id) values ("csZYDcAwqVWBdirhJtCJeRruMmPqbLfhvBSnwLSzpPYHpZSLUhaXqfPvNGJw", "a", "2019-09-21", 4, 1);
+
+
+/* TABLE CATEGORIE */
+
+insert into CATEGORIE(CATEGORIE_nom) values ("Princesses Disney officielles");
+insert into CATEGORIE(CATEGORIE_nom) values ("Princesses Disney non-officielles");
+
+
+/* TABLE ORIGINAL */
+
+insert into ORIGINAL(ORIGINAL_titre, ORIGINAL_description, ORIGINAL_nom_image, LTQCLAC_id, CATEGORIE_id) values("Raiponce", "Princesse incontournable avec une très longue chevelure blonde, dont les pouvoirs ne cesseront pas de vous surprendre", "Raiponce-wallpaper-horizontal.jpg", 1, 1);
+insert into ORIGINAL(ORIGINAL_titre, ORIGINAL_description, ORIGINAL_nom_image, LTQCLAC_id, CATEGORIE_id) values("La Reine des Neiges", "Elle a des pouvoirs de glace", "LaReineDesNeiges-wallpaper-horizontal.jpg", 1, 2);
+insert into ORIGINAL(ORIGINAL_titre, ORIGINAL_description, ORIGINAL_nom_image, LTQCLAC_id, CATEGORIE_id) values("Vaiana", "Elle fait des trucs sur une île", "Vaiana-wallpaper-horizontal.jpg", 1, 1);
+insert into ORIGINAL(ORIGINAL_titre, ORIGINAL_description, ORIGINAL_nom_image, LTQCLAC_id, CATEGORIE_id) values("Ariel", "Elle nage", "Ariel-wallpaper-horizontal.jpg", 1, 1);
+insert into ORIGINAL(ORIGINAL_titre, ORIGINAL_description, ORIGINAL_nom_image, LTQCLAC_id, CATEGORIE_id) values("Mulan", "Elle se bat", "Mulan-wallpaper-horizontal.jpg", 1, 1);
+
+
+/* TABLE GOODIE */
+
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_description, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Poster Raiponce", 2, "Poster de Raiponce", "raiponce-Poster.jpg", 15.00, 3);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_description, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Cartable Raiponce", 3, "Cartable de Raiponce", "raiponce-cartable.jpg", 30.00, 7);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_description, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Mug Raiponce", 5, "Mug de Raiponce", "raiponce-mug.jpg", 8.00, 1);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_description, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Peluche Pascal", 18, "Peluche de Raiponce", "raiponce-peluche.jpg", 13.00, 5);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_description, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("T-shirt Raiponce", 11, "T-shirt de Raiponce", "raiponce-tshirt.jpg", 22.00, 2);
+
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_description, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Coque de téléphone La Reine des Neiges", 2, "Coque de téléphone de La Reine des Neiges", "LaReineDesNeiges-Coque_de_telephone.jpg", 11.00, 13);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_description, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Jeu de cartes La Reine des Neiges", 7, "Jeu de cartes de La Reine des Neiges", "LaReineDesNeiges-Jeu_de_cartes.jpg", 7.00, 9);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_description, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Pyjama La Reine des Neiges", 3, "Pyjama de La Reine des Neiges", "LaReineDesNeiges-Pyjama.jpg", 27.00, 12);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_description, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Trousse La Reine des Neiges", 9, "Trousse de La Reine des Neiges", "LaReineDesNeiges-Trousse.jpg", 12.00, 11);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_description, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Poster La Reine des Neiges", 11, "Poster de La Reine des Neiges", "LaReineDesNeiges-Poster.jpg", 15.00, 3);
+
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_description, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Casquette Vaiana", 2, "Casquette de Vaiana", "Vaiana-Casquette.jpg", 12.00, 4);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_description, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Figurine Vaiana", 2, "Figurine de Vaiana", "Vaiana-Figurine.jpg", 42.00, 6);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_description, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Parure de lit Vaiana", 2, "Parure de lit de Vaiana", "Vaiana-Parure_de_lit.jpg", 35.00, 14);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_description, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Peluche Vaiana", 2, "Peluche de Vaiana", "Vaiana-Peluche.jpg", 13.00, 5);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_description, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Porte-clé Vaiana", 2, "Porte-clé de Vaiana", "Vaiana-Porte_cle.jpg", 4.00, 10);
+
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Brosse à dents Ariel", 2, "Ariel-brosse_à_dents.jpg", 7.00, 8);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Figurine Ariel", 2, "Ariel-Figurine.jpg", 25.00, 6);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Peluche Ariel", 2, "Ariel-Peluche.jpg", 12.00, 5);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Pyjama Ariel", 2, "Ariel-Pyjama.jpg", 17.00, 12);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Mug Ariel", 2, "Ariel-Mug.jpg", 8.00, 1);
+
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Figurine Mulan", 2, "Mulan-Figurine.jpg", 15.00, 6);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Porte Clés Mulan", 2, "Mulan-Porte_clés.jpg", 15.00, 10);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Poster Mulan", 2, "Mulan-Poster.jpg", 15.00, 3);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Trousse Mulan", 2, "Mulan-Trousse.jpg", 15.00, 11);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("T-shirt Mulan", 2, "Mulan-Tshirt.jpg", 15.00, 2);
+
+/* TABLE ORIGINAL_CONTIENT_GOODIES*/
+
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(1,1);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(1,2);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(1,3);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(1,4);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(1,5);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(2,6);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(2,7);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(2,8);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(2,9);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(2,10);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(3,11);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(3,12);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(3,13);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(3,14);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(3,15);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(4,16);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(4,17);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(4,18);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(4,19);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(4,20);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(5,21);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(5,22);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(5,23);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(5,24);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(5,1);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(5,25);
+
+
+/* TABLE COMMANDE_CONTIENT_GOODIES */
+
+insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(1, 2, 1);
+insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(1, 7, 2);
+insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(1, 4, 1);
+
+
+/* TABLE ACTUALITE */
+
+insert into ACTUALITE(ACTUALITE_titre, ACTUALITE_description, ACTUALITE_date, LTQCLAC_id) values("La Reine des Neiges 2 arrive !", "Préparez-vous à l'arrivée du nouveau film événement de la Reine des Neiges avec tous ces nouveaux goodies !", "2019-08-20", 1);
+insert into ACTUALITE(ACTUALITE_titre, ACTUALITE_description, ACTUALITE_date, LTQCLAC_id) values("Déstockage des goodies Vaiana !", "Solde sur tous les goodies de Vaiana!", "2019-09-12", 1);
+
+
+/* TABLE ACTUALITE_SE_REFERE_A_ORIGINAL */
+
+insert into ACTUALITE_SE_REFERE_A_ORIGINAL(ACTUALITE_id, ORIGINAL_id) values(1,2);
+insert into ACTUALITE_SE_REFERE_A_ORIGINAL(ACTUALITE_id, ORIGINAL_id) values(2,3);
