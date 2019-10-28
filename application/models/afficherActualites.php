@@ -8,7 +8,7 @@ class afficherActualites extends CI_Model{
     }
 
 	public function get_actu(){
-        $sql = "SELECT ACTUALITE_titre, ACTUALITE_description, original_nom_image FROM ACTUALITE INNER JOIN actualite_se_refere_a_original USING(ACTUALITE_id) INNER JOIN original USING (ORIGINAL_id) ORDER BY RAND();";
+        $sql = "SELECT ACTUALITE_titre, ACTUALITE_description, original_nom_image FROM ACTUALITE INNER JOIN ACTUALITE_SE_REFERE_A_ORIGINAL USING(ACTUALITE_id) INNER JOIN ORIGINAL USING (ORIGINAL_id) ORDER BY RAND();";
         $query = $this->db->query($sql,array());
         return $query->result_array();
     }
@@ -19,11 +19,26 @@ class afficherActualites extends CI_Model{
         return $query->result_array();
     }
     
-    function can_login($login, $password)
+    public function verify_command_codes($codeclient, $codecommande){
+      $sql = "SELECT CLIENT_code, COMMANDE_code FROM CLIENT LEFT JOIN COMMANDE USING(CLIENT_id) where CLIENT_code = '$codeclient' and COMMANDE_code = '$codecommande'";
+      $query = $this->db->query($sql,array());
+      if($query->num_rows()>0){
+        return true;
+      }
+      else{
+        return false;
+      }
+    }
+
+
+
+
+
+    public function can_login_vendeur($login, $password)
       {
            $this->db->where('VENDEUR_login', $login);
            $this->db->where('VENDEUR_mot_de_passe', $password);
-           $query = $this->db->get('vendeur');
+           $query = $this->db->get('VENDEUR');
            //SELECT * FROM users WHERE username = '$username' AND password = '$password'
            if($query->num_rows() > 0)
            {
@@ -34,6 +49,8 @@ class afficherActualites extends CI_Model{
                 return false;
            }
       }
+
+
     
 /* SAMPLE
         public function get_MesReservations($nom_groupe){

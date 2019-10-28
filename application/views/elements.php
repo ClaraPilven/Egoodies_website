@@ -204,8 +204,10 @@
 				<a href="#" class="genric-btn success circle arrow">Success<span class="lnr lnr-arrow-right"></span></a>
 				<a href="#" class="genric-btn info circle arrow">Info<span class="lnr lnr-arrow-right"></span></a>
 				<a href="#" class="genric-btn warning circle arrow">Warning<span class="lnr lnr-arrow-right"></span></a>
-				<a href="#" class="genric-btn danger circle arrow">Danger<span class="lnr lnr-arrow-right"></span></a>
+				<a href="#" class="genric-btn danger circle arrow">Danger !!<span class="lnr lnr-arrow-right"></span></a>
 			</div>
+            <a href="#" class="genric-btn danger circle arrow">Danger !!<span class="lnr lnr-arrow-right"></span></a>
+
 			<div class="button-group-area mt-10">
 				<a href="#" class="genric-btn default-border circle arrow">Default<span class="lnr lnr-arrow-right"></span></a>
 				<a href="#" class="genric-btn primary-border circle arrow">Primary<span class="lnr lnr-arrow-right"></span></a>

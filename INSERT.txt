@@ -23,26 +23,26 @@ insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("Parure de lit");
 
 /* TABLE POINT_RETRAIT */
 
-insert into POINT_RETRAIT(POINTRETRAIT_nom, POINTRETRAIT_adresse) values("Kergoat", "8 rue du Duc des Myosotis");
-insert into POINT_RETRAIT(POINTRETRAIT_nom, POINTRETRAIT_adresse) values("Guipavas", "85 avenue des lilas");
-insert into POINT_RETRAIT(POINTRETRAIT_nom, POINTRETRAIT_adresse) values("Saint-Malo", "13 boulevard du couscous");
-insert into POINT_RETRAIT(POINTRETRAIT_nom, POINTRETRAIT_adresse) values("Plouarzel", "2 rue de l'Église");
+insert into POINT_RETRAIT(POINT_RETRAIT_nom, POINT_RETRAIT_adresse) values("Kergoat", "8 rue du Duc des Myosotis");
+insert into POINT_RETRAIT(POINT_RETRAIT_nom, POINT_RETRAIT_adresse) values("Guipavas", "85 avenue des lilas");
+insert into POINT_RETRAIT(POINT_RETRAIT_nom, POINT_RETRAIT_adresse) values("Saint-Malo", "13 boulevard du couscous");
+insert into POINT_RETRAIT(POINT_RETRAIT_nom, POINT_RETRAIT_adresse) values("Plouarzel", "2 rue de l'Église");
 
 
 /* TABLE VENDEUR */
 
-insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINTRETRAIT_id) values("vendeur1", "Guillarmou", "Rémi", "password", 1);
-insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINTRETRAIT_id) values("vendeur2", "Pilven", "Mathis", "password", 3);
-insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINTRETRAIT_id) values("vendeur3", "Liscornet", "Maëla", "password", 2);
-insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINTRETRAIT_id) values("vendeur4", "Ragot", "Matthieu", "password", 4);
-insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINTRETRAIT_id) values("vendeur5", "Pilin", "Pierre", "password", 1);
+insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINT_RETRAIT_id) values("vendeur1", "Guillarmou", "Rémi", "password", 1);
+insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINT_RETRAIT_id) values("vendeur2", "Pilven", "Mathis", "password", 3);
+insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINT_RETRAIT_id) values("vendeur3", "Liscornet", "Maëla", "password", 2);
+insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINT_RETRAIT_id) values("vendeur4", "Ragot", "Matthieu", "password", 4);
+insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINT_RETRAIT_id) values("vendeur5", "Pilin", "Pierre", "password", 1);
 
 /* TABLE CLIENT */
 
-insert into CLIENT(CLIENT_code, CLIENT_nom, CLIENT_prenom) values("PvYrxUpPmMnBSNyJBthaUqWmDSERZJWtmmbYzbKzzrDtt", "Quéant", "Quentin");
-insert into CLIENT(CLIENT_code, CLIENT_nom, CLIENT_prenom) values("KHGgZYrFewGxccYnUmrgmHyRzFZFvcgWBXFYpQxiwyrHS", "Richard", "Kaivin");
-insert into CLIENT(CLIENT_code, CLIENT_nom, CLIENT_prenom, CLIENT_mail) values("bgHybWiJDxqdqtXWGYmaswRcZyJCQZhLQLkFBMyvKkVxr", "Fauvel", "Bleuenn", "bleuenn.fauvel@gmail.com");
-insert into CLIENT(CLIENT_code, CLIENT_nom, CLIENT_prenom) values("TqkSpzzYGuQqkFggpgLTMXaqfnYvvBUZGDyNatXiVDpWA", "Houssaye", "Hugo");
+insert into CLIENT(CLIENT_code, CLIENT_nom, CLIENT_prenom) values("PvYrxUpP", "Quéant", "Quentin");
+insert into CLIENT(CLIENT_code, CLIENT_nom, CLIENT_prenom) values("KHGgZYrF", "Richard", "Kaivin");
+insert into CLIENT(CLIENT_code, CLIENT_nom, CLIENT_prenom, CLIENT_mail) values("bgHybWiJ", "Fauvel", "Bleuenn", "bleuenn.fauvel@gmail.com");
+insert into CLIENT(CLIENT_code, CLIENT_nom, CLIENT_prenom) values("TqkSpzzY", "Houssaye", "Hugo");
 
 
 /*  États commande
@@ -55,9 +55,10 @@ insert into CLIENT(CLIENT_code, CLIENT_nom, CLIENT_prenom) values("TqkSpzzYGuQqk
 */
 /* TABLE COMMANDE */
 
-insert into COMMANDE(COMMANDE_code, COMMANDE_etat, COMMANDE_date, POINT_RETRAIT_id, CLIENT_id) values ("YucaXnRRGvdqYzbBnUmdsnsEAThXNBvvZqddLBTYhBcSTiJqWixwGVZJYvqD", "p", "2019-09-20", 1, 3);
-insert into COMMANDE(COMMANDE_code, COMMANDE_etat, COMMANDE_date, COMMANDE_date_retrait, POINT_RETRAIT_id, CLIENT_id) values ("ZrDzdBMNpCBTXPCkyKHDrksHnYfBrbAjvsinpqUukTCYhTYuPeKnGvEkSRmb", "r", "2019-08-22", "2019-08-27", 3, 2);
-insert into COMMANDE(COMMANDE_code, COMMANDE_etat, COMMANDE_date, POINT_RETRAIT_id, CLIENT_id) values ("csZYDcAwqVWBdirhJtCJeRruMmPqbLfhvBSnwLSzpPYHpZSLUhaXqfPvNGJw", "a", "2019-09-21", 4, 1);
+insert into COMMANDE(COMMANDE_code, COMMANDE_etat, COMMANDE_date, POINT_RETRAIT_id, CLIENT_id) values ("YucaXnRRGvdqYzbBnUmd", "p", "2019-09-20", 1, 3);
+insert into COMMANDE(COMMANDE_code, COMMANDE_etat, COMMANDE_date, POINT_RETRAIT_id, CLIENT_id) values ("YucaXnRRInicvzeniIUN", "a", "2019-09-23", 1, 2);
+insert into COMMANDE(COMMANDE_code, COMMANDE_etat, COMMANDE_date, COMMANDE_date_retrait, POINT_RETRAIT_id, CLIENT_id) values ("ZrDzdBMNpCBTXPCkyKHD", "r", "2019-08-22", "2019-08-27", 3, 2);
+insert into COMMANDE(COMMANDE_code, COMMANDE_etat, COMMANDE_date, POINT_RETRAIT_id, CLIENT_id) values ("csZYDcAwqVWBdirhJtCJ", "a", "2019-09-21", 4, 1);
 
 
 /* TABLE CATEGORIE */
@@ -142,6 +143,11 @@ insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(5,25);
 insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(1, 2, 1);
 insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(1, 7, 2);
 insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(1, 4, 1);
+insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(2, 4, 1);
+insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(2, 5, 1);
+insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(2, 9, 3);
+
+
 
 
 /* TABLE ACTUALITE */

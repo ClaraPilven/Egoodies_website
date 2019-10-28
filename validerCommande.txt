@@ -1,0 +1,29 @@
+CREATE PROCEDURE `validerCommande`(IN `p_CLIENT_code` CHAR(45), IN `p_COMMANDE_code` CHAR(60), OUT `p_GOODIE_id` INT, OUT `p_COMMANDE_etat` CHAR(1)) NOT DETERMINISTIC CONTAINS SQL SQL SECURITY DEFINER BEGIN
+
+	DECLARE verif boolean;
+	DECLARE row_commande INT;
+	DECLARE finCurseur BOOLEAN DEFAULT false;
+
+   	DECLARE curseurCommande CURSOR FOR SELECT (GOODIE.GOODIE_nb_en_stock-CCG_quantite) as StockRestant 	
+		FROM COMMANDE_CONTIENT_GOODIES 
+ 		INNER JOIN COMMANDE USING(COMMANDE_id) 
+    		INNER JOIN GOODIE USING (GOODIE_id) WHERE COMMANDE_code = p_COMMANDE_code;
+    
+	DECLARE CONTINUE HANDLER FOR NOT FOUND SET finCurseur = true;
+	OPEN curseurCommande;
+   	FETCH curseurCommande into row_commande;
+    
+    	WHILE NOT FinCurseur DO
+  		IF(row_commande < 0)
+      			THEN SET verif = false;
+      		END IF;
+      		FETCH curseurCommande into row_commande;
+    	END WHILE;
+    	CLOSE curseurCommande;
+    
+    	IF(verif = false)
+    		THEN UPDATE COMMANDE SET COMMANDE.COMMANDE_etat = 's' WHERE COMMANDE_code = p_COMMANDE_code;
+    	ELSE
+		UPDATE COMMANDE SET COMMANDE.COMMANDE_etat = 'v' WHERE COMMANDE_code = p_COMMANDE_code;
+	END IF;
+END
