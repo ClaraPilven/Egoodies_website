@@ -33,7 +33,7 @@
                     <div class="col-md-12 form-group">
                     </div>
                     <div class="col-md-12 form-group">
-                        <input type="submit" name="insert" value="Login" class="btn" />
+                        <input type="submit" name="insert" value="Se connecter" class="btn" />
                         <?php
                                   echo '<label class="text-danger">'.$this->session->flashdata("error").'</label>';
                              ?>

@@ -265,7 +265,6 @@
                                     <h6><?php echo $goodie["GOODIE_prix"]?>€</h6>
                                 </div>
                                 <div class="prd-bottom">
-
                                     <a href="" class="social-info">
                                         <span class="ti-bag"></span>
                                         <p class="hover-text">add to bag</p>

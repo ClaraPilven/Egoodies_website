@@ -34,21 +34,7 @@ class afficherActualites extends CI_Model{
 
 
 
-    public function can_login_vendeur($login, $password)
-      {
-           $this->db->where('VENDEUR_login', $login);
-           $this->db->where('VENDEUR_mot_de_passe', $password);
-           $query = $this->db->get('VENDEUR');
-           //SELECT * FROM users WHERE username = '$username' AND password = '$password'
-           if($query->num_rows() > 0)
-           {
-                return true;
-           }
-           else
-           {
-                return false;
-           }
-      }
+  
 
 
     
