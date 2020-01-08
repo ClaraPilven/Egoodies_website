@@ -1,4 +1,4 @@
-<div id="profile">
+    <div class="container">
 
     <br />
     <br />
@@ -26,12 +26,11 @@
                 Mot de passe :
             </td>
             <td>
-                <p>••••••••</p>
+                <a href='<?php echo(base_url());?>index.php/Accueil/modifier_lemdp_admin/<?php echo $admin[0]['LTQCLAC_login'] ?>'>Modifier mon mot de passe </a>
             </td>
         </tr>
     </table>
     <center>
-        <a href='<?php echo(base_url());?>index.php/Accueil/modifier_admin/<?php echo $admin[0]['LTQCLAC_login'] ?>'>Modifier mon mot de passe <img src="<?php echo(base_url());?>/img/elements/modify.png" height=20px>
-        </a>
+        <a href='<?php echo(base_url());?>index.php/Accueil/modifier_admin/<?php echo $admin[0]['LTQCLAC_login'] ?>'>Modifier <img src="<?php echo(base_url());?>/img/elements/modify.png" height=20px></a>
     </center>
 </div>

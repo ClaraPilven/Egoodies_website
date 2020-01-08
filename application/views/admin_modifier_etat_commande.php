@@ -1,4 +1,7 @@
+
+
 <section class="order_details section_gap">
+    <a class="nav-link primary-btn" href="<?php echo(base_url());?>index.php/Accueil/admin_voir_une_commande/<?php echo $commandes[0]["COMMANDE_id"]?>">Retour</a>
     <div class="container">
         <div class="row order_d_inner">
             <div class="col-lg-4">
@@ -111,12 +114,9 @@
         <center>
 
             <h3>Nouvel Etat :</h3>
-            <?php echo form_open("Accueil/modification_etat_commande");?>
+            <?php echo form_open("Accueil/modification_etat_commande"); ?>
             <div hidden class="col-md-12 form-group">
-                <input type="text" class="form-control" name="admin_login" value="<?php echo $admin[0]['LTQCLAC_login'] ?>">
-            </div>
-            <div hidden class="col-md-12 form-group">
-                <input type="text" class="form-control" name="COMMANDE_id" value="<?php echo $commandes[0]['COMMANDE_id'] ?>">
+            <input type="text" class="form-control" name="COMMANDE_id" value="<?php echo $commandes[0]["COMMANDE_id"]; ?>">
             </div>
             <input type="radio" name="COMMANDE_etat" value="p"> Préparé&nbsp;&nbsp;
             <input type="radio" name="COMMANDE_etat" value="x"> Expédié&nbsp;&nbsp;

@@ -1,12 +1,4 @@
-<br/>
-<br/>
-<br/>
-    
-&nbsp;&nbsp;&nbsp;
-    A propos du point retrait <strong>
-        <?php echo $commandes[0]['POINT_RETRAIT_nom'] ?></strong>, à l'adresse : <strong>
-        <?php echo $commandes[0]['POINT_RETRAIT_adresse'] ?></strong> :
-
+<div id="profile">
     <?php 
 $commande_code = 'a';
 echo '<br>';
@@ -26,14 +18,16 @@ foreach($commandes as $unproduit) {
                 </div>
                 <div class="col-lg-4">
                     <div class="details_item">
-                        <h4>Point de retrait d'arrivée</h4>
+                        <hr>
                         <ul class="list">
+                            <li><a><span>Point retrait</span> : <?php echo $unproduit["POINT_RETRAIT_nom"]?></a></li>
                             <li><a><span>Date de commande</span> :
                                     <?php 
                             $date = date_create($unproduit["COMMANDE_date"]);
                             echo date_format($date, 'd-m-Y') ?></a></li>
 
-                            <li><a><span>Etat de la commande</span> :
+                            <li>
+                                <a><span>Etat de la commande</span> :
                                     <?php 
                         switch($unproduit["COMMANDE_etat"]){
                             case 'p':
@@ -54,14 +48,17 @@ foreach($commandes as $unproduit) {
                             case 'a':
                                 echo "Annulé";
                                 break;                                
-                        }?></a></li>
+                        }?></a>
+                            </li>
                             <a href="<?php echo base_url();?>index.php/Accueil/modifier_etat_commande/<?php echo $unproduit["COMMANDE_id"];?>">Modifier Etat</a>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4">
                 </div>
-                <h2>Détails de la commande&nbsp;<?php echo $unproduit["COMMANDE_id"] ?></h2>
+                <h2>Détails de la commande&nbsp;
+                    <?php echo $unproduit["COMMANDE_id"] ?>
+                </h2>
 
             </div>
             <?php } 
@@ -101,17 +98,17 @@ foreach($commandes as $unproduit) {
                             <?php if(next($commandes)["COMMANDE_code"] != $unproduit["COMMANDE_code"]){ ?>
 
                             <tr>
-                            <td>
-                                <h4>Total</h4>
-                            </td>
-                            <td>
-                                <h5></h5>
-                            </td>
-                            <td>
-                                <p>
-                                    <?php echo $total ?>€</p>
-                            </td>
-                        </tr>
+                                <td>
+                                    <h4>Total</h4>
+                                </td>
+                                <td>
+                                    <h5></h5>
+                                </td>
+                                <td>
+                                    <p>
+                                        <?php echo $total ?>€</p>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -122,10 +119,12 @@ foreach($commandes as $unproduit) {
 
             <?php
 } }}else{?>
-            <p>Ce point de vente n'a pas de commande en cours actuellement</p> <?php } ?>
+            <p>Aucune commande en cours actuellement</p>
+            <?php } ?>
         </div>
 
     </section>
+
 
 </div>
 </body>

@@ -1,9 +1,18 @@
-<div id="profile">
+<div class="container">
 
     <br />
     <br />
     <br />
     <br />
+    <center>
+    <font color="lightgreen">
+        <?php 
+        if ($compte_cree == true){
+            echo "Compte crée avec succès";
+        }
+        ?>
+    </font>
+    </center>
     <h2>Vendeurs</h2>
     <table class='table'>
         <thead>
@@ -12,6 +21,8 @@
                 <th scope="col">Login</th>
                 <th scope="col">Nom</th>
                 <th scope="col">Prénom</th>
+                <th scope="col">Point Retrait</th>
+
             </tr>
         </thead>
         <?php foreach($comptes as $uncompte){ ?>
@@ -28,25 +39,29 @@
             <td>
                 <?php echo $uncompte['VENDEUR_prenom']; ?>
             </td>
+            <td>
+                <?php echo $uncompte['POINT_RETRAIT_nom']; ?>
+            </td>
         </tr>
         <?php } ?>
         <tr>
             <td>
-                <a href="<?php echo base_url();?>index.php/Accueil/ajouter_vendeur/<?php echo $admin[0]['LTQCLAC_login']; ?>">Ajouter un compte</a>
+                <a href="<?php echo base_url();?>index.php/Accueil/ajouter_vendeur/">Ajouter un compte</a>
             </td>
             <td>
             </td>
             <td>
             </td>
             <td>
+            </td><td>
             </td>
         </tr>
     </table>
-    <br/>
+    <br />
     <h2>Administrateurs</h2>
     <?php 
     if($source[0]['LTQCLAC_source']==1){?>
-    
+
     <table class='table'>
         <thead>
             <tr>
@@ -71,7 +86,7 @@
         <?php } ?>
         <tr>
             <td>
-                <a href="<?php echo base_url();?>index.php/Accueil/ajouter_admin/<?php echo $admin[0]['LTQCLAC_login']; ?>">Ajouter un compte</a>
+                <a href="<?php echo base_url();?>index.php/Accueil/ajouter_admin/">Ajouter un compte</a>
             </td>
             <td>
             </td>
@@ -79,6 +94,6 @@
             </td>
         </tr>
     </table>
-    
+
     <?php }?>
 </div>

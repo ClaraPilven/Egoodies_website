@@ -39,29 +39,25 @@
     <header class="header_area">
         <title>Page Vendeur</title>
 
-        <nav class="navbar navbar-expand-lg navbar-light main_box">
-            <div class="container">
+        <nav class="navbar-expand-md navbar-light main_box">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <a hidden class="navbar-brand logo_h" href="<?php echo(base_url());?>index.php"><img src="<?php echo(base_url());?>img/logo.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                    <ul class="nav navbar-nav menu_nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url());?>index.php/Accueil/voir_galerie_admin/<?php echo $admin[0]['LTQCLAC_login'] ?>">Goodies</a> <img src="<?php echo(base_url());?>/style/images/gallery.png" width=25px></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url());?>index.php/Accueil/voir_actualites/<?php echo $admin[0]['LTQCLAC_login'] ?>">Actualités</a> <img src="<?php echo(base_url());?>/style/images/news.png" width=25px></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url());?>index.php/Accueil/voir_comptes/<?php echo $admin[0]['LTQCLAC_login'] ?>">Les comptes</a> <img src="<?php echo(base_url());?>/style/images/profiles.png" width=25px></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url());?>index.php/Accueil/enter_as_admin/<?php echo $admin[0]['LTQCLAC_login'] ?>">Liste des Commandes</a> <img src="<?php echo(base_url());?>/img/features/f-icon1.png" width=25px> </li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url());?>index.php/Accueil/afficher_point_retrait/<?php echo $admin[0]['LTQCLAC_login'] ?>">Points Retrait</a> <img src="<?php echo(base_url());?>/style/images/entrepot.png" width=25px></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url());?>index.php/Accueil/info_admin/<?php echo $admin[0]['LTQCLAC_login'] ?>">Mon profil</a> <img src="<?php echo(base_url());?>/style/images/profile.png" width=25px></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url());?>index.php/Accueil/logout_as_admin">Déconnexion</a> <img src="<?php echo(base_url());?>/style/images/deconnexion.png" width=25px></li>
+                <div class="" id="navbarSupportedContent">
+                    <center>
+                    <ul class="navbar navbar-nav menu_nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url());?>index.php/Accueil/afficher_accueil/"><img src="<?php echo(base_url());?>/style/images/home.png" width=25px> Home</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url());?>index.php/Accueil/voir_galerie_admin/"><img src="<?php echo(base_url());?>/style/images/gallery.png" width=25px> Goodies</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url());?>index.php/Accueil/voir_actualites/"><img src="<?php echo(base_url());?>/style/images/news.png" width=25px> Actualités</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url());?>index.php/Accueil/voir_comptes/"><img src="<?php echo(base_url());?>/style/images/profiles.png" width=25px> Les comptes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url());?>index.php/Accueil/voir_commandes/"><img src="<?php echo(base_url());?>/img/features/f-icon1.png" width=25px> Liste des Commandes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url());?>index.php/Accueil/afficher_point_retrait/"><img src="<?php echo(base_url());?>/style/images/entrepot.png" width=25px> Points Retrait</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url());?>index.php/Accueil/info_admin/"><img src="<?php echo(base_url());?>/style/images/profile.png" width=25px> Mon profil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url());?>index.php/Accueil/logout_as_admin" onclick="return confirm('Etes-vous sûr de vouloir vous déconnecter ?');"><img src="<?php echo(base_url());?>/style/images/deconnexion.png" width=25px> Déconnexion</a></li>
 
                     </ul>
+                        </center>
                 </div>
-            </div>
+                    
         </nav>
     </header>

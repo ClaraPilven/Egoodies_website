@@ -24,7 +24,7 @@
                                         <?php echo $uneactu["ACTUALITE_description"]; ?>
                                     </p>
                                     <div class="add-bag d-flex align-items-center">
-                                        <a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
+                                        <a class="add-btn" href="<?php echo(base_url());?>index.php/Accueil/afficher_goodie_original/<?php echo $uneactu["ORIGINAL_id"]; ?>"><span class="lnr lnr-cross"></span></a>
                                         <span class="add-text text-uppercase">Aller voir</span>
                                     </div>
                                 </div>
@@ -47,12 +47,11 @@
     </section>
     <!-- End banner Area -->
 
-    <!-- start features Area -->
-    
+    <!-- start features Area 
+
     <section class="features-area section_gap">
         <div class="container">
             <div class="row features-inner">
-                <!-- single features -->
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-features">
                         <div class="f-icon">
@@ -62,7 +61,6 @@
                         <p>Free Shipping on all order</p>
                     </div>
                 </div>
-                <!-- single features -->
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-features">
                         <div class="f-icon">
@@ -72,7 +70,6 @@
                         <p>Free Shipping on all order</p>
                     </div>
                 </div>
-                <!-- single features -->
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-features">
                         <div class="f-icon">
@@ -82,7 +79,6 @@
                         <p>Free Shipping on all order</p>
                     </div>
                 </div>
-                <!-- single features -->
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-features">
                         <div class="f-icon">
@@ -94,7 +90,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
     <!-- end features Area -->
 
     <!-- start product Area -->
@@ -501,9 +497,8 @@
             </div>
         </div>
     </section>
-    <!-- end product Area -->
+    <!-- end product Area
 
-    <!-- Start exclusive deal Area -->
     <section class="exclusive-deal-area">
         <div class="container-fluid">
             <div class="row justify-content-center align-items-center">
@@ -538,7 +533,7 @@
                 </div>
                 <div class="col-lg-6 no-padding exclusive-right">
                     <div class="active-exclusive-product-slider">
-                        <!-- single exclusive carousel -->
+
                         <div class="single-exclusive-slider">
                             <img class="img-fluid" src="img/product/e-p1.png" alt="">
                             <div class="product-details">
@@ -554,7 +549,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- single exclusive carousel -->
                         <div class="single-exclusive-slider">
                             <img class="img-fluid" src="img/product/e-p1.png" alt="">
                             <div class="product-details">
@@ -577,7 +571,7 @@
     </section>
     <!-- End exclusive deal Area -->
 
-    <!-- Start brand Area -->
+    <!-- Start brand Area 
     <section class="brand-area section_gap">
         <div class="container">
             <div class="row">
@@ -601,7 +595,7 @@
     </section>
     <!-- End brand Area -->
 
-    <!-- Start related-product Area -->
+    <!-- Start related-product Area 
     <section class="related-product-area section_gap_bottom">
         <div class="container">
             <div class="row justify-content-center">

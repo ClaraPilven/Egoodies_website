@@ -53,25 +53,8 @@
                         <ul class="nav navbar-nav menu_nav ml-auto">
                             <li class="nav-item"><a class="nav-link" href="<?php echo(base_url());?>index.php">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href='<?php echo(base_url());?>index.php/Accueil/voir_galerie'>Galerie</a></li>
-                        
-                            <li class="nav-item submenu dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="blog.php">Blog</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="single-blog.php">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item submenu dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
-                                <ul class="dropdown-menu">
-
-                                    <li class="nav-item"><a class="nav-link" href='<?php echo(base_url());?>index.php/Accueil/view_form_vendeur'>login</a></li>
-
-
-                                    <li class="nav-item"><a class="nav-link" href='<?php echo(base_url());?>index.php/Accueil/view_form_commande'>Voir ma commande</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="elements.php">Elements</a></li>
-                                </ul>
-                            </li>
+                            <li class="nav-item"><a class="nav-link" href='<?php echo(base_url());?>index.php/Accueil/view_form_vendeur'>Se connecter</a></li>
+                            <li class="nav-item"><a class="nav-link" href='<?php echo(base_url());?>index.php/Accueil/view_form_commande'>Suivi de ma commande</a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">

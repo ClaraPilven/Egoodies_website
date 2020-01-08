@@ -8,7 +8,7 @@ class afficherActualites extends CI_Model{
     }
 
 	public function get_actu(){
-        $sql = "SELECT ACTUALITE_titre, ACTUALITE_description, original_nom_image FROM ACTUALITE INNER JOIN ACTUALITE_SE_REFERE_A_ORIGINAL USING(ACTUALITE_id) INNER JOIN ORIGINAL USING (ORIGINAL_id) ORDER BY RAND();";
+        $sql = "SELECT ACTUALITE_titre, ACTUALITE_description, original_nom_image, ORIGINAL_id FROM ACTUALITE INNER JOIN ACTUALITE_SE_REFERE_A_ORIGINAL USING(ACTUALITE_id) INNER JOIN ORIGINAL USING (ORIGINAL_id) ORDER BY RAND();";
         $query = $this->db->query($sql,array());
         return $query->result_array();
     }

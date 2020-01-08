@@ -172,7 +172,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `zil3-zpilvenma`.`GOODIE` (
   `GOODIE_id` INT NOT NULL AUTO_INCREMENT,
-  `GOODIE_nom` VARCHAR(60) NOT NULL,
+  `GOODIE_nom` VARCHAR(100) NOT NULL,
   `GOODIE_nb_en_stock` INT NOT NULL,
   `GOODIE_description` VARCHAR(300) NULL,
   `GOODIE_nom_image` VARCHAR(100) NULL,

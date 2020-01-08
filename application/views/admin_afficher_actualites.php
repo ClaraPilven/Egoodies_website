@@ -1,6 +1,5 @@
-<div id="profile">
+    <div class="container">
 
-    <br />
     <br />
     <br />
     <br />
@@ -8,13 +7,11 @@
     <table class='table'>
         <thead>
             <tr>
-                <th scope="col">ID</th>
+                <th scope="col">ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                 <th scope="col">Titre</th>
+                <th scope="col">Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                 <th scope="col">Description</th>
-                <th scope="col">Date</th>
-                <th scope="col">Original</th>
-            </tr>
-        </thead>
+                <th scope="col">Original&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th></thead>
         <?php foreach($actualites as $une_actualite){ ?>
         <tr>
             <td>
@@ -24,10 +21,10 @@
                 <?php echo $une_actualite['ACTUALITE_titre']; ?>
             </td>
             <td>
-                <?php echo $une_actualite['ACTUALITE_description']; ?>
+                <?php echo $une_actualite['ACTUALITE_date']; ?>
             </td>
             <td>
-                <?php echo $une_actualite['ACTUALITE_date']; ?>
+                <?php echo $une_actualite['ACTUALITE_description']; ?>
             </td>
             <td>
                 <?php echo $une_actualite['ORIGINAL_titre']; ?>
@@ -36,7 +33,9 @@
         <?php } ?>
         <tr>
             <td>
-                <a hidden href="<?php echo base_url();?>index.php/Accueil/ajouter_actualites/<?php echo $admin[0]['LTQCLAC_login']; ?>">Ajouter une actualité</a>
+                <a href="<?php echo base_url();?>index.php/Accueil/ajouter_actualites/">Ajouter une actualité</a>
+            </td>
+            <td>
             </td>
             <td>
             </td>
@@ -46,3 +45,5 @@
             </td>
         </tr>
     </table>
+
+</div>

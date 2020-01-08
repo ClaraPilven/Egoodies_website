@@ -1,5 +1,4 @@
-<div id="profile">
-    <br />
+    <div class="container">
     <br />
     <br />
     <br />
@@ -40,7 +39,6 @@
                     <td>
                         <?php echo form_open("Accueil/admin_voir_commandes_point_retrait");?>
                         <input hidden name="point_retrait_id" value="<?php echo $unpointretrait["POINT_RETRAIT_id"]; ?>">
-                        <input hidden name="admin_login" value="<?php echo $admin[0]['LTQCLAC_login']; ?>">
 
                         <input type="submit" name="insert" value="Voir commandes associées" class="btn" />
                         </form>

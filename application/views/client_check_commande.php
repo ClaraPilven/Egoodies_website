@@ -111,7 +111,9 @@
             </div>
         </div>
         <br>
-        <center><a href="#" class="genric-btn danger circle arrow">Annuler ma commande<span class="lnr lnr-arrow-right"></span></a> </center>
+        <!--<center><a class="genric-btn danger circle arrow">Annuler ma commande<span class="lnr lnr-arrow-right"></span></a></center>-->
+        <center><a href="supprimer_commande_client/<?php echo($commandeinfo[1]["COMMANDE_id"]);?>" class="genric-btn danger circle arrow" onclick="return confirm('Etes-vous sûr de vouloir annuler votre commande ?');">Annuler ma commande<span class="lnr lnr-arrow-right"></span></a></center>
+ 
 
     </div>
 </section>

@@ -6,7 +6,6 @@
     </div>
 </section>
 <!-- End Banner Area -->
-
 <!--================Login Box Area =================-->
 <section class="login_box_area section_gap">
     <div class="container">
@@ -27,7 +26,7 @@
                             <?php echo form_error('mdp_utilisateur_vendeur'); ?></span>
                         <font color="red">
                             <?php if ($containserror == true){
-									echo 'Le code client ou le code commande entré ne correspond à aucune commande. Veuillez réessayer.';} ?>
+									echo 'Le login ou le mot de passe est incorrect. Veuillez réessayer.';} ?>
                         </font>
                     </div>
                     <div class="col-md-12 form-group">

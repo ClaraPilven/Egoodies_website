@@ -1,25 +1,36 @@
 <div id="profile">
 
-<br/>
-<br/>
-<br/>
-<br/>
+    <br />
+    <br />
+    <br />
+    <br />
+    <a class="nav-link primary-btn" href="<?php echo(base_url());?>index.php/Accueil/info_admin/">Retour</a>
 
-<center>
-<table class='table'>
-    <tr>
-        Modifiez le mot de passe ici : 
-    <?php echo form_open("Accueil/modifier_mdp_admin");?>
-        
-        <input hidden name="login" value="<?php echo $admin[0]['LTQCLAC_login']; ?>">
-        
-        <input type="password" placeholder="Password" id="pwd" class="masked" name="password" value="<?php echo $admin[0]['LTQCLAC_mot_de_passe']?>" ?>
-        
-        <button type="button" onclick="showHide()" id="eye">
-            <img src="<?php echo base_url(); ?>/style/images/eyefont.jpg" width=30px alt="eye"/>
-         </button>
-    </tr>
-</table>
-<input type="submit" name="insert" value="Enregistrer les modifications" class="btn" />
-</center>
+    
+    <div class="row">
+        <div class="col-lg-3">
+        </div>
+        <div class="col-lg-9">
+            <?php echo form_open("Accueil/modifier_donnees_admin");?>
+            <div class="col-md-6">
+                <div class="form-group">
+                    Login
+                    <input type="text" class="form-control" id="login" name="login" value="<?php echo $admin[0]['LTQCLAC_login'];?>">
+                    <font color="red"><span>
+                            <?php echo form_error('login'); ?></span></font>
+                    <?php if ($logintaken == true){
+                        echo '<font color="red">login déjà existant</font>';
+                    }?>
+                </div>
+            </div>
+
+            <div class="col-md-7 text-right">
+                <button type="submit" value="submit" class="primary-btn">Valider</button>
+            </div>
+            </form>
+        </div>
     </div>
+
+
+
+</div>

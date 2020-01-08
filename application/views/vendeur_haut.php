@@ -38,4 +38,27 @@
     <!-- Start Header Area -->
     <header class="header_area">
         <title>Page Vendeur</title>
+        <nav class="navbar navbar-expand-lg navbar-light main_box">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <a hidden class="navbar-brand logo_h" href="<?php echo(base_url());?>index.php"><img src="<?php echo(base_url());?>img/logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav menu_nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url());?>index.php/Accueil/afficher_accueil_vendeur/"><img src="<?php echo(base_url());?>/style/images/home.png" width=25px> Home</a> </li>
+                        <li class="nav-item"><a class="nav-link" href='<?php echo(base_url());?>index.php/Accueil/afficher_commandes/'>Mes Commandes</a> <img src="<?php echo(base_url());?>/img/features/f-icon1.png" width=25px> </li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url());?>index.php/Accueil/info_vendeur">Mon profil</a> <img src="<?php echo(base_url());?>/style/images/deconnexion.png" width=25px></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url());?>index.php/Accueil/logout_as_vendeur" onclick="return confirm('Etes-vous sûr de vouloir vous déconnecter ?');">Déconnexion</a> <img src="<?php echo(base_url());?>/style/images/deconnexion.png" width=25px></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
             

@@ -1,6 +1,7 @@
 /* TABLE ADMINS */
 
-insert into LATABLEQUICONTIENTLESADMINISTRATEURSCOOLS(LTQCLAC_login, LTQCLAC_mot_de_passe, LTQCLAC_source) values ("Responsable", "resp19*DOOG", true);
+insert into LATABLEQUICONTIENTLESADMINISTRATEURSCOOLS(LTQCLAC_login, LTQCLAC_mot_de_passe, LTQCLAC_source) values ("Responsable", "3bfd973d55e1dd9193b97995c312c1742522a0022eea10799916dbaefc198db5", true);
+insert into LATABLEQUICONTIENTLESADMINISTRATEURSCOOLS(LTQCLAC_login, LTQCLAC_mot_de_passe, LTQCLAC_source) values ("admin2", "51671dbec21649768510f7b126adc47242c9fc07086a11aabb309238e3d1e2f1", false);
 
 
 /* TABLE GOODIE_TYPE */
@@ -19,6 +20,9 @@ insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("Trousse");
 insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("Pyjama");
 insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("Coque de téléphone");
 insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("Parure de lit");
+insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("Carnet de dessin");
+insert into GOODIE_TYPE(GOODIE_TYPE_nom) values("Coffret DVD");
+
 
 
 /* TABLE POINT_RETRAIT */
@@ -27,19 +31,21 @@ insert into POINT_RETRAIT(POINT_RETRAIT_nom, POINT_RETRAIT_adresse) values("Kerg
 insert into POINT_RETRAIT(POINT_RETRAIT_nom, POINT_RETRAIT_adresse) values("Guipavas", "85 avenue des lilas");
 insert into POINT_RETRAIT(POINT_RETRAIT_nom, POINT_RETRAIT_adresse) values("Saint-Malo", "13 boulevard du couscous");
 insert into POINT_RETRAIT(POINT_RETRAIT_nom, POINT_RETRAIT_adresse) values("Plouarzel", "2 rue de l'Église");
+insert into POINT_RETRAIT(POINT_RETRAIT_nom, POINT_RETRAIT_adresse) values("Rennes", "5 rue Alexandre le Grand");
 
 
 /* TABLE VENDEUR */
 
-insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINT_RETRAIT_id) values("vendeur1", "Guillarmou", "Rémi", "password", 1);
-insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINT_RETRAIT_id) values("vendeur2", "Pilven", "Mathis", "password", 3);
-insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINT_RETRAIT_id) values("vendeur3", "Liscornet", "Maëla", "password", 2);
-insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINT_RETRAIT_id) values("vendeur4", "Ragot", "Matthieu", "password", 4);
-insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINT_RETRAIT_id) values("vendeur5", "Pilin", "Pierre", "password", 1);
+insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINT_RETRAIT_id) values("vendeur1", "Guillarmou", "Rémi", "51671dbec21649768510f7b126adc47242c9fc07086a11aabb309238e3d1e2f1", 1);
+insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINT_RETRAIT_id) values("vendeur2", "Pilven", "Mathis", "51671dbec21649768510f7b126adc47242c9fc07086a11aabb309238e3d1e2f1", 3);
+insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINT_RETRAIT_id) values("vendeur3", "Liscornet", "Maëla", "51671dbec21649768510f7b126adc47242c9fc07086a11aabb309238e3d1e2f1", 2);
+insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINT_RETRAIT_id) values("vendeur4", "Ragot", "Matthieu", "51671dbec21649768510f7b126adc47242c9fc07086a11aabb309238e3d1e2f1", 4);
+insert into VENDEUR(VENDEUR_login, VENDEUR_nom, VENDEUR_prenom, VENDEUR_mot_de_passe, POINT_RETRAIT_id) values("vendeur5", "Pilin", "Pierre", "51671dbec21649768510f7b126adc47242c9fc07086a11aabb309238e3d1e2f1", 1);
 
 /* TABLE CLIENT */
 
 insert into CLIENT(CLIENT_code, CLIENT_nom, CLIENT_prenom) values("PvYrxUpP", "Quéant", "Quentin");
+insert into CLIENT(CLIENT_code, CLIENT_nom, CLIENT_prenom) values("ANuivriG", "Salaün", "Anna");
 insert into CLIENT(CLIENT_code, CLIENT_nom, CLIENT_prenom) values("KHGgZYrF", "Richard", "Kaivin");
 insert into CLIENT(CLIENT_code, CLIENT_nom, CLIENT_prenom, CLIENT_mail) values("bgHybWiJ", "Fauvel", "Bleuenn", "bleuenn.fauvel@gmail.com");
 insert into CLIENT(CLIENT_code, CLIENT_nom, CLIENT_prenom) values("TqkSpzzY", "Houssaye", "Hugo");
@@ -55,10 +61,12 @@ insert into CLIENT(CLIENT_code, CLIENT_nom, CLIENT_prenom) values("TqkSpzzY", "H
 */
 /* TABLE COMMANDE */
 
-insert into COMMANDE(COMMANDE_code, COMMANDE_etat, COMMANDE_date, POINT_RETRAIT_id, CLIENT_id) values ("YucaXnRRGvdqYzbBnUmd", "p", "2019-09-20", 1, 3);
-insert into COMMANDE(COMMANDE_code, COMMANDE_etat, COMMANDE_date, POINT_RETRAIT_id, CLIENT_id) values ("YucaXnRRInicvzeniIUN", "a", "2019-09-23", 1, 2);
-insert into COMMANDE(COMMANDE_code, COMMANDE_etat, COMMANDE_date, COMMANDE_date_retrait, POINT_RETRAIT_id, CLIENT_id) values ("ZrDzdBMNpCBTXPCkyKHD", "r", "2019-08-22", "2019-08-27", 3, 2);
-insert into COMMANDE(COMMANDE_code, COMMANDE_etat, COMMANDE_date, POINT_RETRAIT_id, CLIENT_id) values ("csZYDcAwqVWBdirhJtCJ", "a", "2019-09-21", 4, 1);
+insert into COMMANDE(COMMANDE_code, COMMANDE_etat, COMMANDE_date, POINT_RETRAIT_id, CLIENT_id) values ("RKfTZPFrzYTkTqjnCqgs", "p", "2019-11-20", 1, 5);
+insert into COMMANDE(COMMANDE_code, COMMANDE_etat, COMMANDE_date, POINT_RETRAIT_id, CLIENT_id) values ("XjdwdoYPxOkaMDAdjBTJ", "x", "2019-11-20", 2, 4);
+insert into COMMANDE(COMMANDE_code, COMMANDE_etat, COMMANDE_date, POINT_RETRAIT_id, CLIENT_id) values ("UPurjusRxXBTzGPIYvad", "d", "2019-11-20", 3, 3);
+insert into COMMANDE(COMMANDE_code, COMMANDE_etat, COMMANDE_date, POINT_RETRAIT_id, CLIENT_id) values ("fUHUgRWrbJkTvQuwCPys", "e", "2019-10-23", 1, 5);
+insert into COMMANDE(COMMANDE_code, COMMANDE_etat, COMMANDE_date, COMMANDE_date_retrait, POINT_RETRAIT_id, CLIENT_id) values ("cCAYyItNKfIxhZqgCfNp", "r", "2019-10-22", "2019-08-27", 1, 2);
+insert into COMMANDE(COMMANDE_code, COMMANDE_etat, COMMANDE_date, POINT_RETRAIT_id, CLIENT_id) values ("suHMlifaBCrZTMInkHwU", "a", "2019-11-21", 4, 1);
 
 
 /* TABLE CATEGORIE */
@@ -108,6 +116,10 @@ insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_nom_image, GOODIE_prix
 insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Trousse Mulan", 2, "Mulan-Trousse.jpg", 15.00, 11);
 insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("T-shirt Mulan", 2, "Mulan-Tshirt.jpg", 15.00, 2);
 
+
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Livre de dessins des princesses Disney ", 2, "Raiponce-Ariel-LivreDessins.jpg", 8.00, 15);
+insert into GOODIE(GOODIE_nom, GOODIE_nb_en_stock, GOODIE_nom_image, GOODIE_prix, GOODIE_type_id) values("Coffret DVD contenant les films Vaiana, Raiponce et La Reine des Neiges", 2, "LaReineDesNeiges-Vaiana-Raiponce-CoffretDVD.jpg", 35.00, 16);
+
 /* TABLE ORIGINAL_CONTIENT_GOODIES*/
 
 insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(1,1);
@@ -134,8 +146,13 @@ insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(5,21);
 insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(5,22);
 insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(5,23);
 insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(5,24);
-insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(5,1);
 insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(5,25);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(1,26);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(4,26);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(1,27);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(2,27);
+insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(3,27);
+
 
 
 /* TABLE COMMANDE_CONTIENT_GOODIES */
@@ -143,9 +160,15 @@ insert into ORIGINAL_CONTIENT_GOODIES(ORIGINAL_id, GOODIE_id) values(5,25);
 insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(1, 2, 1);
 insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(1, 7, 2);
 insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(1, 4, 1);
-insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(2, 4, 1);
+insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(2, 10, 1);
 insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(2, 5, 1);
-insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(2, 9, 3);
+insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(2, 9, 4);
+insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(3, 14, 1);
+insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(3, 12, 1);
+insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(3, 5, 3);
+insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(5, 16, 8);
+insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(5, 1, 1);
+insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) values(5, 4, 3);
 
 
 
@@ -154,9 +177,12 @@ insert into COMMANDE_CONTIENT_GOODIES(COMMANDE_id, GOODIE_id, CCG_quantite) valu
 
 insert into ACTUALITE(ACTUALITE_titre, ACTUALITE_description, ACTUALITE_date, LTQCLAC_id) values("La Reine des Neiges 2 arrive !", "Préparez-vous à l'arrivée du nouveau film événement de la Reine des Neiges avec tous ces nouveaux goodies !", "2019-08-20", 1);
 insert into ACTUALITE(ACTUALITE_titre, ACTUALITE_description, ACTUALITE_date, LTQCLAC_id) values("Déstockage des goodies Vaiana !", "Solde sur tous les goodies de Vaiana!", "2019-09-12", 1);
+insert into ACTUALITE(ACTUALITE_titre, ACTUALITE_description, ACTUALITE_date, LTQCLAC_id) values("Le retour de Mulan !", "Mulan revient pour un Live Action, venez découvrir les nouveautés qui l'accompagnent", "2019-11-20", 2);
 
 
 /* TABLE ACTUALITE_SE_REFERE_A_ORIGINAL */
 
 insert into ACTUALITE_SE_REFERE_A_ORIGINAL(ACTUALITE_id, ORIGINAL_id) values(1,2);
 insert into ACTUALITE_SE_REFERE_A_ORIGINAL(ACTUALITE_id, ORIGINAL_id) values(2,3);
+insert into ACTUALITE_SE_REFERE_A_ORIGINAL(ACTUALITE_id, ORIGINAL_id) values(3,5);
+
